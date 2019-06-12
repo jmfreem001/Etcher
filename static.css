@@ -1,0 +1,28 @@
+body{
+    background-color: white
+  }
+  .header{
+    margin-left: 300px
+  }
+  .container{
+    display:-webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #abaaa5;
+    height: 400px;
+    width: 650px;
+    margin-left: 100px;
+    border: 60px solid #d10003;
+  }
+  .container div{
+    -webkit-flex:1;
+    flex: 1;
+
+  }
+
+  .circle{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ebebf3;
+  }
