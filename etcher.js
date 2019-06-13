@@ -1,18 +1,52 @@
 
-let dimension =  16;
-let container = document.querySelector(".container";)
-for (let i = 0; i < dimension; i++){
-    //for j < dimension i ++
+
+let container = document.querySelector(".container");
+drawBoard(60);
+
+function drawBoard(n){
+  
+  for (let i = 0; i < n; i++){
+    for (let j = 0; j < n; j++){
+      let cell = document.createElement("div");
+      cell.classList.add("item");
+      container.appendChild(cell);
+    }
+  }
+  // Event listener for each div "hover" change background color to black. 
+  let items = document.querySelectorAll(".item");
+  items.forEach(item => item.addEventListener("mouseover", makeEtch));
+}
+
     //create element
     //add class cell
     // append as child to container. 
 
     //Need to set max width to dimension and then start a new row
 
-}
-
 // Event listener "onclick"for "#shaker" to reset grid 
+let button = document.getElementById("shaker");
+button.addEventListener("click", resetBoard);
   //prompt for squares per side of new sketch area higher provides more detail. 
   // (Optionally) Add a shake animation
 
-// Event listener for each div "onhover" change background color to black. 
+
+// Disable scroll
+
+  //TODO
+
+function makeEtch(e){
+  e.target.classList.add("etched");
+}
+
+function resetBoard(){
+  do {
+    n = prompt("How many squares wide do you want the drawing area?")
+  }while(n==="" || isNaN(n) || n < 0)
+  // Clear the old divs
+  while(container.children.length > 0){
+    container.removeChild(container.children[0]);
+  }
+  // Add new ones. 
+  drawBoard(n);
+  //update css for number of rows and columns
+}
