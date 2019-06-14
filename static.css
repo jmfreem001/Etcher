@@ -1,39 +1,48 @@
 body{
-    background-color: white
+  background-color: white
 }
 .header{
-  margin-left: 300px
+margin-left: 300px
 }
 .container{
-  display: grid;
-  grid-template-columns: repeat(100, 1fr);
-  background-color: #abaaa5;
-  height: 400px;
-  width: 650px;
-  margin-left: 100px;
-  border: 60px solid #d10003;
+display: grid;
+grid-template-columns: repeat(100, 1fr);
+background-color: #abaaa5;
+height: 400px;
+width: 650px;
+margin-left: 100px;
+border: 60px solid #d10003;
 }
 .item{
-  /* grid-template-columns: repeat(16,1fr); */
+
 }
 .etched{
-  background-color: black;
+background-color: black;
 }
 .circle1{
-  height:50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #ebebf3;
-  position:fixed;
-  bottom:7%;
-  left: 22%;
+height:50px;
+width: 50px;
+border-radius: 50%;
+background-color: #ebebf3;
+position:fixed;
+top: 545px;
+left: 250px;
 }
 .circle2{
-  height:50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #ebebf3;
-  position:fixed;
-  bottom:7%;
-  right: 25%;
+height:50px;
+width: 50px;
+border-radius: 50%;
+background-color: #ebebf3;
+position:fixed;
+top: 545px;
+left: 650px;
+}
+#shaker{
+  border-radius:15%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 605px;
+  left: 400px;
 }

@@ -4,7 +4,7 @@ let container = document.querySelector(".container");
 drawBoard(60);
 
 function drawBoard(n){
-  
+  container.setAttribute("style", `grid-template-columns: repeat(${n}, 1fr);`)
   for (let i = 0; i < n; i++){
     for (let j = 0; j < n; j++){
       let cell = document.createElement("div");
@@ -17,12 +17,7 @@ function drawBoard(n){
   items.forEach(item => item.addEventListener("mouseover", makeEtch));
 }
 
-    //create element
-    //add class cell
-    // append as child to container. 
-
-    //Need to set max width to dimension and then start a new row
-
+  
 // Event listener "onclick"for "#shaker" to reset grid 
 let button = document.getElementById("shaker");
 button.addEventListener("click", resetBoard);
@@ -41,7 +36,7 @@ function makeEtch(e){
 function resetBoard(){
   do {
     n = prompt("How many squares wide do you want the drawing area?")
-  }while(n==="" || isNaN(n) || n < 0)
+  }while(n==="" || isNaN(n) || n < 0 |n > 120)
   // Clear the old divs
   while(container.children.length > 0){
     container.removeChild(container.children[0]);
@@ -49,4 +44,5 @@ function resetBoard(){
   // Add new ones. 
   drawBoard(n);
   //update css for number of rows and columns
+  //TODO
 }
